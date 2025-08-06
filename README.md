@@ -1,31 +1,43 @@
-# Transformer
-Health Monitor
+# Transformer Health Monitoring System (IoT-based)
 
-This project monitors critical parameters of a transformer (temperature, load current, and oil level) using ESP32 and sends data to ThingSpeak for remote monitoring.
+This project monitors key parameters of a power transformer such as temperature, current, oil level, and humidity using ESP32 and sends the data to ThingSpeak for remote monitoring. This helps in predictive maintenance of distribution transformers.
 
 ## 📌 Features
-- Real-time sensor data monitoring
-- LCD display output
-- IoT dashboard (ThingSpeak)
-- Useful for predictive maintenance
+- Real-time sensor data collection (Temp, Current, Oil Level)
+- Data visualization on LCD
+- Remote monitoring via ThingSpeak IoT dashboard
+- ESP32-based firmware written in Embedded C
 
-## 🛠️ Technologies Used
-- Embedded C (Arduino IDE)
+## 🛠️ Components Used
 - ESP32 microcontroller
-- ThingSpeak API
-- DHT11, CT Sensor, LCD
+- DHT11 sensor (Temperature and Humidity)
+- SCT-013 CT Sensor (Current)
+- Float switch / Oil level sensor
+- 16x2 LCD with I2C
+- ThingSpeak Cloud (for IoT data logging)
 
-## 🚀 How to Use
-1. Connect sensors to ESP32 as per schematic.
-2. Update Wi-Fi credentials and ThingSpeak API key in the code.
-3. Upload the code using Arduino IDE.
-4. View real-time data on ThingSpeak dashboard.
+## 📷 System Overview
 
-## 🔗 Live Dashboard
-> (Add your ThingSpeak link here)
+![Wiring Diagram](Schematics/wiring_diagram.png)
 
-## 📸 Demo Image
-![Prototype](Images/demo_prototype.jpg)
+## 🔧 Setup Instructions
+1. Open the `Code/transformer_monitor.ino` file in Arduino IDE.
+2. Install the required libraries:  
+   - `DHT sensor library`
+   - `LiquidCrystal_I2C`
+   - `ThingSpeak`
+3. Replace Wi-Fi credentials and ThingSpeak API key in the code.
+4. Connect the hardware as shown in the diagram.
+5. Upload the code to ESP32.
+6. Visit your ThingSpeak channel to monitor real-time data.
 
-## 📄 License
-This project is licensed under the MIT License.
+## 💡 Live Dashboard Example
+👉 _[Insert your ThingSpeak link here once set up]_
+
+## 🔗 Related Technologies
+- Embedded C / Arduino IDE
+- IoT and Cloud Communication
+- Electrical transformer health monitoring
+
+## 🪪 License
+MIT License
